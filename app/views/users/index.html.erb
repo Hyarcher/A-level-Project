@@ -1,0 +1,10 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+<% @Users.each do |user| %>
+<%= link_to user.email, user %>
+	<%= form_for(user) do |f| %>
+
+	<%= f.select(:role, User.roles.keys.map{|role|[role.titleize,role]})%>
+	<%= f.submit 'change role', :class => 'button-xs' %>
+  <% end %>
+<% end %>
