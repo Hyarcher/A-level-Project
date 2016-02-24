@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'blogs/index'
+
+  get 'blogs/new'
+
   devise_for :users
   resources :users
 

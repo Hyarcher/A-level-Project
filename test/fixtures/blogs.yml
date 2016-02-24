@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bodyText: MyString
+  blogCount: 1
+  fee: 9.99
+  user_id: 1
+
+two:
+  bodyText: MyString
+  blogCount: 1
+  fee: 9.99
+  user_id: 1
