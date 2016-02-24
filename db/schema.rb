@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160201114141) do
+ActiveRecord::Schema.define(version: 20160224103357) do
+
+  create_table "blogs", force: :cascade do |t|
+    t.string   "bodyText"
+    t.integer  "blogCount",  default: 0
+    t.decimal  "fee",        default: 0.0
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
