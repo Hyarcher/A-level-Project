@@ -6,7 +6,7 @@ function updateCountdown() {
 function moneyforletters() {
     var typed = 0.05* jQuery('.message').val().length
     cashconvert = typed.toFixed(2);
-    jQuery('.moneyup').text(cashconvert);
+    jQuery('.moneyup').text("£"+cashconvert);
 }
 
 jQuery(document).ready(function($) {
@@ -19,4 +19,3 @@ jQuery(document).ready(function($) {
 	$('.message').change(moneyforletters);
 	$('.message').keyup(moneyforletters);
 });
-Status API Training Shop Blog About Pricing
