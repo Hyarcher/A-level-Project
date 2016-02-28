@@ -15,6 +15,6 @@ class BlogsController < ApplicationController
     end
   end
   def blog_params
-    params.require(:blog).permit(:bodyText)
+    params.require(:blog).permit(:bodyText, :Money, :fee)
   end
 end
