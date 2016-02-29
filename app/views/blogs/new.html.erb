@@ -1,2 +1,12 @@
 <h1>Blogs#new</h1>
-<p>Find me in app/views/blogs/new.html.erb</p>
+<p>Journalists write here.</p>
+<div class='span6'>
+<%= form_for @blog do |h| %>
+  <%= h.label :bodyText %>
+  <br />
+  <%= h.text_area :bodyText, cols: 50, rows: 4, class: "message" %>
+  <br />
+  <%= h.text_field :fee %>
+  <%= h.submit 'add' %>
+<% end %>
+</div>
