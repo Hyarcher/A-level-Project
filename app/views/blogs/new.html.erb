@@ -1,12 +1,34 @@
-<h1>Blogs#new</h1>
+<h1>New Blog</h1>
+<%= params.inspect %>
 <p>Journalists write here.</p>
-<div class='span6'>
-<%= form_for @blog do |h| %>
-  <%= h.label :bodyText %>
-  <br />
-  <%= h.text_area :bodyText, cols: 50, rows: 4, class: "message" %>
-  <br />
-  <%= h.text_field :fee %>
-  <%= h.submit 'add' %>
-<% end %>
-</div>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Copy &amp; Paste, Word &amp; Character counter</title>
+    </head>
+    <body>
+        <div id="border">
+            <textarea id='text'></textarea>
+        </div>
+        <button id="Count">Count</button>
+        <button id="Submit">Submit</button>
+        <div id="result">
+            Words: <span id="wordCount">0</span><br/>
+            Total Characters(including trails): <span id="totalChars">0</span><br/>
+            Characters (excluding trails): <span id="charCount">0</span><br/>
+            Characters (excluding all spaces): <span id="charCountNoSpace">0</span><br/>
+            Characters (money made): <span id="moneyup">0</span><br/>
+        </div>
+        <div class='span6'>
+        <%= form_for @blog do |h| %>
+
+          <span class="moneyup"></span>
+          <%= h.text_field :fee %>
+          <%= h.submit 'add' %>
+        <% end %>
+        </div>
+
+</a>
+    </body>
+</html>
