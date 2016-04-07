@@ -10,9 +10,9 @@ class UsersController < ApplicationController
   def update
     @Users = User.find(params[:id])
     if @Users.update_attributes(secure_params)
-       redirect_to users_path, :notice =>"all good in the hood"
+       redirect_to users_path, :notice =>"Everything is okay"
     else
-       redirect_to users_path, :alert =>"didn't happen"
+       redirect_to users_path, :alert =>"Didn't happen"
     end
   end
   private
