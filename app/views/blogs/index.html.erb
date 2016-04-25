@@ -1,6 +1,9 @@
 <h1>Blog index change1</h1>
 <p>List of all the current blogs</p>
-
+ <%= form_tag blogs_path, :method => 'get' do %>
+   <%= collection_select :blog, :user_id, User.all, :id, :firstname, prompt: true %>
+   <%= submit_tag "Submit" %>
+  <% end %>
 <% @blogs.each do |harry| %>
 <li><%= harry.bodyText %></li>
 <%= harry.fee %></li>
