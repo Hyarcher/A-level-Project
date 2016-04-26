@@ -1,0 +1,7 @@
+<h1>Myviews#index</h1>
+<p>Find me in app/views/myviews/index.html.erb</p>
+<%= params.inspect %>
+
+<% @myblog.each do |h| %>
+  <li><%= h.bodyText %>
+<% end %>
